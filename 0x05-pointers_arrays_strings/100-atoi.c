@@ -6,15 +6,15 @@
  */
 int _atoi(char *s)
 {
-	unsigned int nb = 0;
+	unsigned int num = 0;
 	int sign = 1;
 
 	do {
 		if (*s == '-')
-			nb *= -1;
+			num *= -1;
 		else if (*s >= '0' && *s <= '9')
-			nb = (nb * 10) + (*s - '0');
-		else if (nb > 0)
+			num = (nb * 10) + (*s - '0');
+		else if (num > 0)
 			break;
 	} while (*s++);
 
