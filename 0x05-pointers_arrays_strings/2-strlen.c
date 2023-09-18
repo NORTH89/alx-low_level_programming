@@ -4,15 +4,14 @@
  * @s: the value to be evaluate.
  * return: not.
  */
-void _strlen(char *s)
+int _strlen(char *s)
 {
-	int leng;
+	int len = 0;
 
 	while (*s != '\0')
 	{
 		s++;
-		leng++;
-
-		return (leng);
+		len++;
 	}
+	return (len);
 }
