@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
- * atoi- convert a string to an integer.
- * @s: string input parameter.
- * Return: converted integer from string.
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
+ *
+ * Return: A integer
  */
 int _atoi(char *s)
 {
@@ -11,7 +13,7 @@ int _atoi(char *s)
 
 	do {
 		if (*s == '-')
-			num *= -1;
+			sign *= -1;
 		else if (*s >= '0' && *s <= '9')
 			num = (num * 10) + (*s - '0');
 		else if (num > 0)
