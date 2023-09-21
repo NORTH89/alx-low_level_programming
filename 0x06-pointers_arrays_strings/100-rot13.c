@@ -6,7 +6,6 @@
  * @str: string to be encoded
  * Return: pointer to encoded string
  */
-
 char *rot13(char *str)
 {
 	char *result = str;
@@ -14,16 +13,13 @@ char *rot13(char *str)
 
 	for (; *str; str++)
 	{
-		for (i = 0; i < 13; i++)
+		i = ((*str >= 'A' && *str <= 'Z') ? (*str - 'A') :
+				((*str >= 'a' && *str <= 'z') ? (*str - 'a') : 0));
+
+		if (i != 0)
 		{
-			if ((*str >= 'A' && *str < 'Z') || (*str >= 'a' && *str < 'z'))
-			{
-				(*str)++;
-			}
-			else if (*str == 'Z' || *str == 'z')
-			{
-				*str -= 25;
-			}
+			i = (i + 13) % 26;
+			*str = ((*str >= 'A' && *str <= 'Z') ? (i + 'A') : (i + 'a'));
 		}
 	}
 
