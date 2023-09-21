@@ -8,20 +8,19 @@
  */
 char *rot13(char *str)
 {
-	char *result = str;
-	int i;
+    char *result = str;
+    int i;
 
-	for (; *str; str++)
-	{
-		i = ((*str >= 'A' && *str <= 'Z') ? (*str - 'A') :
-				((*str >= 'a' && *str <= 'z') ? (*str - 'a') : 0));
+    for (; *str; str++)
+    {
+        i = ((*str >= 'A' && *str <= 'Z') ? (*str - 'A') : ((*str >= 'a' && *str <= 'z') ? (*str - 'a') : 0));
 
-		if (i != 0)
-		{
-			i = (i + 13) % 26;
-			*str = ((*str >= 'A' && *str <= 'Z') ? (i + 'A') : (i + 'a'));
-		}
-	}
+        if (i != 0)
+        {
+            i = (i + 13) % 26;
+            *str = ((*str >= 'A' && *str <= 'Z') ? (i + 'A') : (i + 'a'));
+        }
+    }
 
-	return (result);
+    return (result);
 }
