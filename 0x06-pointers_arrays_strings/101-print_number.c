@@ -6,20 +6,28 @@
  */
 void print_number(int n)
 {
-	int temp = n;
-	int divisor = 1;
-
 	if (n < 0)
 	{
 		_putchar('-');
-		temp = -n;
+		n = -n;
 	}
 
-	while (temp > 9)
+	if (n == 0)
 	{
-		divisor *= 10;
-		temp /= 10;
+		_putchar('0');
+		return;
 	}
+
+	int divisor = 1;
+	int temp = n;
+
+	while (temp != 0)
+	{
+		temp /= 10;
+		divisor *= 10;
+	}
+
+	divisor /= 10;
 
 	while (divisor != 0)
 	{
