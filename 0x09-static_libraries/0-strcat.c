@@ -1,23 +1,21 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
  * _strcat - concatenates two strings
- * @dest: string to be appended to
- * @src: string to be appended to dest
+ * @dest: input value
+ * @src: input value
  *
- * Return: pointer to dest
+ * Return: void
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, j;
+	int i;
+	int j;
 
 	i = 0;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-
 	j = 0;
 	while (src[j] != '\0')
 	{
@@ -27,6 +25,5 @@ char *_strcat(char *dest, char *src)
 	}
 
 	dest[i] = '\0';
-
 	return (dest);
 }

@@ -1,24 +1,15 @@
-#include <stdio.h>
 #include "main.h"
-/**
- *_strcpy - update value.
- *@dest: value to be evaluate.
- *@src: value to be evaluate.
- *Return: not.
- */
-char *_strcpy(char *dest, char *src)
-{
-	int l = 0;
-	int x = 0;
 
-	while (*(src + l) != '\0')
+/**
+ * _abs - computes the absolute value of an integer
+ * @n: the int to check
+ * Return: the absolute value of int
+ */
+int _abs(int n)
+{
+	if (n >= 0)
 	{
-		l++;
+		return (n);
 	}
-	for (; x < l; x++)
-	{
-		dest[x] = src[x];
-	}
-	dest[l] = '\0';
-	return (dest);
+	return (-n);
 }
