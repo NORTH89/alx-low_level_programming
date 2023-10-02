@@ -10,4 +10,5 @@ int is_prime_number(int n);
 int _putchar(char c);
 int _pow_recursion(int x, int y);
 int sqrt_helper(int n, int m);
+int is_palindrome(char *s);
 #endif
