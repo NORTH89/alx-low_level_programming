@@ -1,12 +1,13 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * get_op_func - selects the correct function to perform the operation
- * @s: the operator
+ * @s: The operator
  *
- * Return: pointer to the function that corresponds to the operator
+ * Return: A pointer to the function corresponding to the operator
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -21,7 +22,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (*ops[i].op == *s)
+		if (strcmp(ops[i].op, s) == 0)
 		{
 			return (ops[i].f);
 		}
