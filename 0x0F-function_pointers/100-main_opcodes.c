@@ -9,7 +9,6 @@
  *
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int num_bytes, i;
@@ -28,7 +27,7 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	unsigned char *main_opcodes = (unsigned char *)main;
+	unsigned char *main_opcodes = (unsigned char *)(unsigned long)&main;
 
 	for (i = 0; i < num_bytes; i++)
 	{
