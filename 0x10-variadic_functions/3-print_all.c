@@ -2,14 +2,19 @@
 #include <stdio.h>
 /**
  * print_all - prints anything
- * @format: format to print
+ * @format: list of types of arguments passed to the function
  * @...: variable number of arguments
- *
  * Return: Nothing
  */
+#include <stdarg.h>
+#include <stdio.h>
+
 void print_all(const char *const format, ...)
 {
 	const char *ptr = format;
+	char c;
+	int i;
+	float f;
 	char *s;
 
 	va_list args;
@@ -20,30 +25,29 @@ void print_all(const char *const format, ...)
 	{
 		if (*ptr == 'c')
 		{
-			printf("%c", va_arg(args, int));
+			c = va_arg(args, int);
+			printf("%c%s", c, (*(ptr + 1)) ? ", " : "");
 		}
 		else if (*ptr == 'i')
 		{
-			printf("%d", va_arg(args, int));
+			i = va_arg(args, int);
+			printf("%d%s", i, (*(ptr + 1)) ? ", " : "");
 		}
 		else if (*ptr == 'f')
 		{
-			printf("%f", va_arg(args, double));
+			f = va_arg(args, double);
+			printf("%f%s", f, (*(ptr + 1)) ? ", " : "");
 		}
 		else if (*ptr == 's')
 		{
 			s = va_arg(args, char *);
 			if (s != NULL)
-				printf("%s", s);
+				printf("%s%s", s, (*(ptr + 1)) ? ", " : "");
 			else
-				printf("(nil)");
+				printf("(nil)%s", (*(ptr + 1)) ? ", " : "");
 		}
-
 		ptr++;
-		if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
-			printf(", ");
 	}
-
 	va_end(args);
 	printf("\n");
 }
