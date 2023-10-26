@@ -11,11 +11,28 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index >= sizeof(n) * 8)
+	unsigned long int num;
+	unsigned int x, count = 0;
+
+	if (n == 0)
 	{
-		fprintf(stderr, "Error: index out of range\n");
-		return (-1);
+		count = 1;
+	}
+	else
+	{
+		for (num = n; num > 0; num >>= 1)
+			count++;
 	}
 
-	return ((n >> index) & 1);
+	if (index > (sizeof(unsigned long int) * 8))
+		return (-1);
+
+	if (index > count - 1)
+		return (0);
+
+	x = n >> index;
+	if (x & 1)
+		return (1);
+	else
+		return (0);
 }
