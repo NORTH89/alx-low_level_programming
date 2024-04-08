@@ -8,15 +8,15 @@
 
 This repository contains code for various search algorithms like Linear Search, Binary Search, Jump Search, Exponential Search, Fibonacci Search. All the algorithms are implemented in C++ and has unit tests written using the Google Test Framework.
 
-<a href="https://github.com/AkashSingh3031/0x1E-search_algorithms/blob/master/LinearSearch/linear_search.h">Linear Search</a>
-<br>
-<a href="https://github.com/AkashSingh3031/0x1E-search_algorithms/blob/master/BinarySearch/binary_search.h">Binary Search</a>
-<br>
-<a href="https://github.com/AkashSingh3031/0x1E-search_algorithms/blob/master/JumpSearch/jump_search.h">Jump Search</a>
-<br>
-<a href="https://github.com/AkashSingh3031/0x1E-search_algorithms/blob/master/ExponentialSearch/exponential_search.h">Exponential Search</a>
-<br>
-<a href="https://github.com/AkashSingh3031/0x1E-search_algorithms/blob/master/FibonacciSearch/fibonacci_search.h">Fibonacci Search</a>
+
+Here are some resources to learn about search algorithms:
+
+* GeeksForGeeks: [Searching Algorithms](http://www.geeksforgeeks.org/searching-algorithms/)
+* Tutorials Point: [Searching Algorithms](https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithm.htm)
+* Clrs Algorithms book: [Searching Algorithms](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+* Khan Academy: [Searching Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms/search-algorithms/a/linear-search)
+* Coursera: [Searching Algorithms](https://www.coursera.org/learn/algorithms-searching)
+
 
 <br><br>
 <img src="https://i.imgur.com/VK76kKK.gif" align="left" width="300" hspace="20" vspace="2">
